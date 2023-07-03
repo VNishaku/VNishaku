@@ -24,7 +24,7 @@
   $user = "root";
   $password = "";
   $database = "contact";
-  $port=3306;
+  $port=;
 
   $conn = mysqli_connect($host, $user, $password, $database);
   // $con = mysqli_connect($server, $username, $password,$db);
