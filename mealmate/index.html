@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MEALMATE | Home</title>
+    <!-- Linking Fontawesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+        integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+        crossorigin="anonymous" />
+    <!-- Linking Flickity -->
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+    <!-- Main stylesheet -->
+    <!-- <link rel="stylesheet" href="style/style.css"> -->
+</head>
+
+<body>
+<style>
+    * {
+  /* Deault CSS on all Elements */
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "San Francisco", arial, sans-serif;
+}
+
+header {
+  text-align: center;
+  background-color:white;
+}
+
+ .banner {
+  /* Backgroung banner GIF */ 
+  background-attachment: fixed;
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: 40%;
+} 
+
+/* Style the top navigation bar */
+nav {
+  display: flex;
+  background-color: #333;
+  align-items: center;
+}
+
+/* Style the navigation bar links */
+nav .menu-btn {
+  color: white;
+  padding: 15px 20px;
+  text-decoration: none;
+  text-align: center;
+}
+
+/* Change color on hover */
+nav .menu-btn:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Sizing Logo */
+nav .logo {
+  width: 100%;
+  height: auto;
+  max-width: 25px;
+  margin: 0px 15px;
+}
+
+/* Main column */
+main {
+  flex: 100%;
+  /* Set the width of the main content */
+  background-color: white;
+  /* White background color */
+}
+
+/* every even section with grey color */
+section:nth-child(even) {
+  background-color: #f7f7f7;
+}
+
+section {
+  background-color: rgb(244, 235, 204);
+  text-align: center;
+  height: 100%;
+  padding: 75px 0px;
+  min-height: 40vh;
+}
+
+section h2 {
+  margin-bottom: 50px;
+}
+
+section h2 span {
+  padding: 10px 55px;
+  border-radius: 20px;
+  color: #fff;
+  background: #0977cc;
+  /* fallback for old browsers */
+  background: linear-gradient(to right, #f53776, #c82a74);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.carousel-cell {
+  width: 66%;
+  margin-right: 10px;
+  counter-increment: carousel-cell;
+}
+
+.carousel-cell video {
+  max-width: 100%;
+}
+
+.iframe-container {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  padding-top: 56.25%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+}
+
+.iframe-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+}
+
+.profile_img {
+  border-radius: 50%;
+}
+.profile_name {
+  font-size: 2em;
+  font-weight: 900;
+  letter-spacing: 4px;
+  word-spacing: 10px;
+  text-transform: uppercase;
+  margin: 20px 0px 30px 0px;
+}
+
+.about_content {
+  justify-content: center;
+  color: #1c1a3a;
+  font-weight: 900;
+  padding-bottom: 10px 0px 20px 0px;
+}
+
+.about_title {
+  font-size: 1.45em;
+  padding: 0px 10px;
+  color: #120f5e;
+}
+.about_us {
+  margin: 50px;
+}
+
+.fa-youtube {
+  color: #e62117;
+}
+
+.founder {
+  background-color: rgba(255, 255, 255, 0.8);
+}
+.sm-handle {
+  display: flex;
+  justify-content: center;
+}
+
+.sm-handle a {
+  padding: 10px 15px;
+  border-radius: 30px;
+  margin: 5px 10px;
+  background-color: rgb(125 125 125 / 25%);
+  text-decoration: none;
+}
+
+.sm-handle a:hover {
+  background-color: rgb(30 30 30 / 25%);
+}
+
+.sm-handle a i {
+  margin: 5px;
+}
+
+.yt_handle {
+  color: #e62117;
+}
+
+.twitter_handle {
+  color: #0e76a8;
+}
+
+.insta_handle {
+  color: #dd2a7b;
+}
+
+.img-responsive {
+  max-width: 100vh;
+  height: 100vh;
+}
+
+footer {
+  display: flex;
+  overflow: hidden;
+  /* Hide overflow */
+  background-color: black;
+  /* Dark background color */
+}
+footer a {
+  float: left;
+  /* Make sure that the links stay side-by-side */
+  display: block;
+  /* Change the display to block, for responsive reasons (see below) */
+  color: white;
+  /* White text color */
+  text-align: center;
+  /* Center the text */
+  padding: 14px 20px;
+  /* Add some padding */
+  text-decoration: none;
+  /* Remove underline */
+}
+
+.copyright {
+  color: #fff;
+  /* to align item to left */
+  margin-left: auto;
+  padding-right: 15px;
+}
+
+.flex-align-left {
+  margin-left: auto;
+}
+
+@media screen and (max-width: 700px) {
+  footer,
+  .sm-handle,
+  nav {
+    flex-direction: column;
+    padding: 10px 0px;
+  }
+
+  .flex-align-left {
+    margin-left: 0;
+  }
+}
+li[class] {
+    font-size: 200%;
+}
+
+li[class="a"] {
+    background-color: royalblue;
+}
+
+li[class~="a"] {
+    color: slateblue;
+}
+/*! Flickity v2.2.2
+https://flickity.metafizzy.co
+---------------------------------------------- */
+
+.flickity-enabled {
+  position: relative;
+}
+
+.flickity-enabled:focus { outline: none; }
+
+.flickity-viewport {
+  overflow: hidden;
+  position: relative;
+  height: 100%;
+}
+
+.flickity-slider {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+/* draggable */
+
+.flickity-enabled.is-draggable {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.flickity-enabled.is-draggable .flickity-viewport {
+  cursor: move;
+  cursor: -webkit-grab;
+  cursor: grab;
+}
+
+.flickity-enabled.is-draggable .flickity-viewport.is-pointer-down {
+  cursor: -webkit-grabbing;
+  cursor: grabbing;
+}
+
+/* ---- flickity-button ---- */
+
+.flickity-button {
+  position: absolute;
+  background: hsla(0, 0%, 100%, 0.75);
+  border: none;
+  color: #333;
+}
+
+.flickity-button:hover {
+  background: white;
+  cursor: pointer;
+}
+
+.flickity-button:focus {
+  outline: none;
+  box-shadow: 0 0 0 5px #19F;
+}
+
+.flickity-button:active {
+  opacity: 0.6;
+}
+
+.flickity-button:disabled {
+  opacity: 0.3;
+  cursor: auto;
+  /* prevent disabled button from capturing pointer up event. #716 */
+  pointer-events: none;
+}
+
+.flickity-button-icon {
+  fill: currentColor;
+}
+
+/* ---- previous/next buttons ---- */
+
+.flickity-prev-next-button {
+  top: 50%;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  /* vertically center */
+  transform: translateY(-50%);
+}
+
+.flickity-prev-next-button.previous { left: 10px; }
+.flickity-prev-next-button.next { right: 10px; }
+/* right to left */
+.flickity-rtl .flickity-prev-next-button.previous {
+  left: auto;
+  right: 10px;
+}
+.flickity-rtl .flickity-prev-next-button.next {
+  right: auto;
+  left: 10px;
+}
+
+.flickity-prev-next-button .flickity-button-icon {
+  position: absolute;
+  left: 20%;
+  top: 20%;
+  width: 60%;
+  height: 60%;
+}
+
+/* ---- page dots ---- */
+
+.flickity-page-dots {
+  position: absolute;
+  width: 100%;
+  bottom: -25px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-align: center;
+  line-height: 1;
+}
+
+.flickity-rtl .flickity-page-dots { direction: rtl; }
+
+.flickity-page-dots .dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin: 0 8px;
+  background: #333;
+  border-radius: 50%;
+  opacity: 0.25;
+  cursor: pointer;
+}
+
+.flickity-page-dots .dot.is-selected {
+  opacity: 1;
+}
+</style>
+    <!-- >>>Change the header bg and add the gif remove the text -->
+    <header>
+        <div class="banner"></div>
+
+        <!-- Navigation Bar -->
+        <nav>
+            <!-- >>>Change Home with the logo -->
+            <a href="#">
+                <img class="logo"
+                 src="mealmate.jpeg" 
+                 alt="mealmate">
+            </a>
+            <div class="g-signin2" data-onsuccess="onSignIn"></div>
+            <!-- <a class="menu-btn" href="#">Food</a> -->
+            <a class="menu-btn" href="about.html">About</a>
+            <a class="menu-btn" href="detail.html">Contact</a>
+            <a class="menu-btn" href="Service.html">Services</a>
+            <!-- <a class="menu-btn" href="Meal.html">Menu</a> -->
+            <a class="menu-btn flex-align-left" href="login.php" >Login</a>
+            <!-- href="login.html" href="signup.html" -->
+        </nav>
+    </header>
+    <main>
+        <section class="FOR MEAL">
+            <h2><span>FOOD in BUDGET</span></h2>
+
+            <img class="profile_img" 
+            src="mealmate.jpeg" 
+            alt="GHAR KA KHANA">
+            <h3 class="profile_name">MEALMATE</h3>
+            <div class="sm-handle">
+                <a class="yt_handle" href="#" target="_blank"
+                    rel="noopener noreferrer"><i class="fab fa-youtube fa-lg"></i>YouTube</a>
+                <a class="twitter_handle" href="#" target="_blank"
+                    rel="noopener noreferrer"><i class="fab fa-twitter fa-lg"></i>twitter</a>
+                <a class="insta_handle" href="#" target="_blank"
+                    rel="noopener noreferrer"><i class="fab fa-instagram fa-lg"></i>Instagram</a>
+            </div>
+
+            <div class="about_us">
+                <h4 class="about_title">MEALMATE stands for the BUDGET friendly food(Hindi: मीलमेट; "भोजन साथी"), 
+                  which translates literally to "Food Friendly".</h4>
+                <h5 class="about_content">A tiffin service website is a platform that allows users to see budgt friendly healthy and delicious home-cooked meals. 
+                  The website typically features a menu of dishes that are available for details about the ingredients used and nutritional information.                 
+                  The subscription service may include the option to customize meals based on dietary preferences and restrictions, such as vegan, vegetarian, gluten-free, or low-carb.    
+                  In addition to the menu , the website may also have an about page that provides information about the company and its mission, as well as a contact page where users can get in touch with the team if they have any questions or concerns.                 
+                  Overall, a MEALMATE is designed to provide a convenient and healthy meal delivery service to customers who are looking for an alternative to fast food and restaurant meals. The website allows users to easily order and customize their meals, and provides a hassle-free solution to meal planning and preparation.</h5>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <a href="FAQ.html">FAQ</a>
+        <a href="Contact.php">Contact Us</a>
+        <a href="#">Terms of Use</a>
+        <a href="#">Privacy Policy</a>
+        <!-- <a href="#">Refund Policy</a> -->
+        <a href="#" class="flex-align-left">&copy; 2023 | MEALMATE</a>
+    </footer>
+    <!-- Flickity JS files -->
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+</body>
+
+</html>

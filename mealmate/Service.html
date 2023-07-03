@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!--Icon for website -->
+    <!-- <link rel="apple-touch-icon" sizes="180x180" href="./assets/logo/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/logo/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/logo/favicon/favicon-16x16.png">
+    <link rel="manifest" href="./assets/logo/favicon/site.webmanifest"> --> 
+
+    <title>Service</title>
+
+    <!-- Linking Fontawesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+        integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+        crossorigin="anonymous" />
+    <!-- Linking Flickity -->
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+    <!-- Main stylesheet -->
+    <!-- <link rel="stylesheet" href="style/style.css"> -->
+</head>
+<style>
+* {
+    /* Deault CSS on all Elements */
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: "San Francisco", arial, sans-serif;
+  }
+  
+  header {
+    text-align: center;
+    background-color: #333;
+  }
+  
+  .banner {
+    background-attachment: fixed;
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: 40%;
+  }
+  
+  /* Style the top navigation bar */
+  nav {
+    display: flex;
+    background-color: #333;
+    align-items: center;
+  }
+  
+  /* Style the navigation bar links */
+  nav .menu-btn {
+    color: white;
+    padding: 15px 20px;
+    text-decoration: none;
+    text-align: center;
+  }
+  
+  /* Change color on hover */
+  nav .menu-btn:hover {
+    background-color: #ddd;
+    color: black;
+  } 
+  /* Main column */
+  main {
+    flex: 100%;
+    /* Set the width of the main content */
+    background-color: white;
+    /* White background color */
+  }
+  
+  /* every even section with grey color */
+  section:nth-child(even) {
+    background-color: #f7f7f7;
+  }
+  
+  section {
+    text-align: center;
+    height: 100%;
+    padding: 75px 0px;
+    min-height: 40vh;
+  }
+  
+  section h2 {
+    margin-bottom: 50px;
+  }
+  
+  section h2 span {
+    padding: 10px 55px;
+    border-radius: 20px;
+    color: #fff;
+    background: #120f5e;
+    /* fallback for old browsers */
+    background: linear-gradient(to right, #f5d837, #bbb812);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  }
+  
+  .carousel-cell {
+    width: 66%;
+    margin-right: 10px;
+    counter-increment: carousel-cell;
+  }
+  
+  .carousel-cell  {
+    max-width: 100%;
+  }
+  
+  .iframe-container {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    padding-top: 56.25%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+  }
+  
+  .iframe-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+  } 
+  .about_content {
+    justify-content: center;
+    color: #1c1a3a;
+    font-weight: 900;
+    padding-bottom: 10px 0px 20px 0px;
+  }
+  
+  .about_title {
+    font-size: 1.45em;
+    padding: 0px 10px;
+    color: #120f5e;
+  }
+  .about_us {
+    margin: 50px;
+  }
+  footer {
+    display: flex;
+    overflow: hidden;
+    /* Hide overflow */
+    background-color: black;
+    /* Dark background color */
+  }
+  
+  footer a {
+    float: left;
+    /* Make sure that the links stay side-by-side */
+    display: block;
+    /* Change the display to block, for responsive reasons (see below) */
+    color: white;
+    /* White text color */
+    text-align: center;
+    /* Center the text */
+    padding: 14px 20px;
+    /* Add some padding */
+    text-decoration: none;
+    /* Remove underline */
+  }
+  
+  .copyright {
+    color: #fff;
+    /* to align item to left */
+    margin-left: auto;
+    padding-right: 15px;
+  }
+  
+  .flex-align-left {
+    margin-left: auto;
+  }
+  
+  @media screen and (max-width: 700px) {
+    footer,
+    .sm-handle,
+    nav {
+      flex-direction: column;
+      padding: 10px 0px;
+    }
+  
+    .flex-align-left {
+      margin-left: 0;
+    }
+  }</style>
+<body>
+    <header>
+        <div class="banner"></div>>
+        <nav>
+            <!-- >>>Change Home with the logo -->
+            <a class="menu-btn" href="index.html">Home</a>
+            <a class="menu-btn" href="about.html">About</a>
+            <a class="menu-btn" href="detail.html">Contact</a>
+            <a class="menu-btn flex-align-left" href="login.html">Login/SignUp</a>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2><span>Service Providers</span></h2>
+            <div class="carousel js-flickity" data-flickity='{"wrapAround": true }'>
+                        <div class="carousel-cell">
+                            <img src="paneer.png" alt="Course Name">
+                            <h3>raghav guashami <a class="id" href="Meal.html"> MENU</a></h3>
+                            <h3>Contact-no: 933-xxx-xxxx </h3>
+                        </div>
+                        <div class="carousel-cell">
+                            <img src="pureVeg.png" alt="Course Name">
+                            <h3>sushant khera<a class="id" href="Meal.html"> MENU</a></h3>
+                            <h3>Contact-no: 911-xxx-xxxx </h3>
+                        </div>
+                        <div class="carousel-cell">
+                            <img src="Chinese.png" alt="Course Name">
+                            <h3>miya mishra <a class="id" href="Meal.html"> MENU</a></h3>
+                            <h3>Contact-no: 932-xxx-xxxx </h3>
+                        </div>
+                        <div class="carousel-cell">
+                            <img src="Southind.png" alt="Course Name">
+                            <h3>hori dev<a class="id" href="Meal.html"> MENU</a></h3>
+                            <h3>Contact-no: 964-xxx-xxxx </h3>
+                        </div>
+            </div>
+        </section>
+            </div>
+
+            <div class="about_us">
+                <h4 class="about_title">MEALMATE | PROVIDES YOU CORRECT DETAILS OF RESTURANTS</h4>
+                <h5 class="about_content">Customizable Meal Plans: Many tiffin services offer customizable meal plans to cater to people's specific dietary requirements and taste preferences.
+                     This feature can be helpful for people who have specific food restrictions or allergies.
+
+                    Quality Food: Tiffin services usually provide home-cooked food, which is generally considered healthier and of better quality than restaurant food. By providing freshly prepared, nutritious meals, tiffin services can help people maintain a healthy diet.
+                    
+                    Feedback and Reviews: Tiffin service websites often provide a feedback and review system, which allows customers to share their experiences and rate the service.
+                     This feedback system can be helpful for potential customers who are considering using the service, as it provides them with insights into the quality of the service and the food.
+                    
+                    Improved Business Operations: Tiffin service providers can also use feedback and reviews to improve their operations and make necessary adjustments to meet the needs and preferences of their customers. 
+                    This can lead to an improved overall customer experience and an increase in business.
+                    
+                    In summary, tiffin service websites and feedback systems can help people by providing a convenien customizable meal plans, quality food, and a feedback system to improve the overall customer experience.</h5>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <a href="FAQ.html">FAQ</a>
+        <a href="Contact.php">Contact Us</a>
+        <a href="#" class="flex-align-left">&copy; 2023 | MEALMATE</a>
+    </footer>
+    <!-- Flickity JS files -->
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+</body>
+
+</html>
