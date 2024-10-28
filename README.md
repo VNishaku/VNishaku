@@ -1,4 +1,4 @@
-# 👋 Hello, I'm [Your Name]!
+# 👋 Hello, I'm Nisha!
 
 Welcome to my GitHub! I'm a  Data Scientist with a passion for building impactful projects and exploring new technologies. I’m always learning, collaborating, and creating.
 
