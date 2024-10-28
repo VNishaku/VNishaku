@@ -1,6 +1,6 @@
 # 👋 Hello, I'm Nisha!
 
-Welcome to my GitHub! I'm a  Data Scientist with a passion for building impactful projects and exploring new technologies. I’m always learning, collaborating, and creating.
+I'm a data science enthusiast with a background in Computer Science and a growing passion for extracting insights from data. Welcome to my GitHub profile!
 
 ## 🚀 About Me
 - 🎓 **Recent Graduate** in Computer Science with skills in Python, Java, JavaScript, and SQL.
@@ -11,4 +11,3 @@ Welcome to my GitHub! I'm a  Data Scientist with a passion for building impactfu
 - **Languages**: Python, Java, JavaScript, SQL
 - **Tools & Libraries**: Pandas, NumPy, Matplotlib, Git
 
-Thanks for visiting! 😊
